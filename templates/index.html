@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Upload Image</title>
+    <style>
+
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f0f0f0;
+            text-align: center;
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        form {
+            margin-top: 20px;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .file-input {
+            margin: 10px;
+        }
+
+        .submit-button, .file-upload-button {
+            background-color: #f3d678;
+            color: #fff;
+            margin: 10px;
+            border: none;
+            border-radius: 5px;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        .submit-button:hover, .file-upload-button:hover {
+            background-color: #f3b70d;
+        }
+
+        input[type="file"] {
+            display: none;
+        }
+
+        .file-upload-button + .file-upload {
+            margin-left: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>Upload Image</h1>
+        <form action="/upload" method="post" enctype="multipart/form-data">
+            <label for="file" class="file-upload-button">File</label>
+            <input type="file" name="file" id="file" class="file-upload">
+            <button type="submit" class="submit-button">Upload</button>
+        </form>
+    </div>
+</body>
+
+</html>
